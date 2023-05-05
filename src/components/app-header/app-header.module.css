@@ -1,0 +1,49 @@
+.header {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 40px 40px 0 40px;
+    background: #1C1C21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menuItem {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 16px 8px 16px;
+    padding-left: 20px;
+
+}
+
+.menuItem:last-of-type {
+    margin-right: 0;
+}
+
+.link {
+    color: #F2F2F3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 16px 20px 16px 8px;
+}
+
+.inactive {
+    color: #8585AD;
+}
+
+.listItem {
+    list-style: none;
+}
+
+.logo {
+    margin-left: 112px;
+    margin-right: 288.85px;
+}
