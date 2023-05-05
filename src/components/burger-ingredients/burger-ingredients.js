@@ -1,11 +1,11 @@
 import React from 'react';
 import burgerIngredientsStyles from './burger-ingredients.module.css';
+import PropTypes from 'prop-types';
+import { menuItemPropTypes } from '../../utils/constants';
 
 import { Tab, CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 
-import data from '../../utils/data';
-
-function BurgerIngredients() {
+function BurgerIngredients({ data, setIngredientInModal }) {
     const [current, setCurrent] = React.useState('one');
 
     return (
@@ -29,7 +29,7 @@ function BurgerIngredients() {
                     {data.map((item) => {
                         if (item.type === "bun") {
                             return (
-                                <div key={item._id} className={`${burgerIngredientsStyles.item} ml-4`}>
+                                <div key={item._id} className={`${burgerIngredientsStyles.item} ml-4`} onClick={() => setIngredientInModal(item)}>
                                     <img src={item.image} alt={item.name} />
                                     <div className={`${burgerIngredientsStyles.price} mt-1 mb-1`}>
                                         <p className={`${burgerIngredientsStyles.digits} text text_type_digits-default`}>{item.price}</p>
@@ -47,7 +47,25 @@ function BurgerIngredients() {
                     {data.map((item) => {
                         if (item.type === "sauce") {
                             return (
-                                <div key={item._id} className={`${burgerIngredientsStyles.item} ml-4`}>
+                                <div key={item._id} className={`${burgerIngredientsStyles.item} ml-4`} onClick={() => setIngredientInModal(item)}>
+                                    <img src={item.image} alt={item.name} className={burgerIngredientsStyles.image} />
+                                    <div className={`${burgerIngredientsStyles.price} mt-1 mb-1`}>
+                                        <p className={`${burgerIngredientsStyles.digits} text text_type_digits-default`}>{item.price}</p>
+                                        <CurrencyIcon type="primary" />
+                                    </div>
+                                    <p className={burgerIngredientsStyles.name}>{item.name}</p>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+
+                <h2 className={`${burgerIngredientsStyles.headerTwo} mb-6`}>Начинки</h2>
+                <div className={`${burgerIngredientsStyles.burgerItems} pb-10 pt-6`}>
+                    {data.map((item) => {
+                        if (item.type === "main") {
+                            return (
+                                <div key={item._id} className={`${burgerIngredientsStyles.item} ml-4`} onClick={() => setIngredientInModal(item)}>
                                     <img src={item.image} alt={item.name} className={burgerIngredientsStyles.image} />
                                     <div className={`${burgerIngredientsStyles.price} mt-1 mb-1`}>
                                         <p className={`${burgerIngredientsStyles.digits} text text_type_digits-default`}>{item.price}</p>
@@ -62,6 +80,11 @@ function BurgerIngredients() {
             </div>
         </div>
     );
+}
+
+BurgerIngredients.propTypes = {
+    data: PropTypes.arrayOf(menuItemPropTypes.isRequired).isRequired,
+    setIngredientInModal: PropTypes.func.isRequired
 }
 
 export default BurgerIngredients;
