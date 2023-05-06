@@ -1,0 +1,76 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 912px;
+    margin-bottom: 40px;
+    width: 600px;
+}
+
+.headerOne {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.headerTwo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.burgerItems {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    padding-left: 0;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.digits {
+    margin-right: 8px;
+    font-size: 28px;
+    line-height: 24px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.scrolled {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 664px;
+}
+
+.scrolled::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrolled::-webkit-scrollbar-track {
+    background: #2F2F37;
+}
+
+.scrolled::-webkit-scrollbar-thumb {
+    background: #8585AD;
+    border: 3px solid #2F2F37;
+}
+
+.image {
+    width: 240px;
+    height: 120px;
+    align-self: center;
+}

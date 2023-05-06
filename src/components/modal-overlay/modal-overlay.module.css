@@ -1,0 +1,9 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 122vh;
+    opacity: 0.6;
+    background: #000;
+}

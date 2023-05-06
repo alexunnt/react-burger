@@ -1,0 +1,55 @@
+.main {
+    height: 912px;
+}
+
+.scrolled {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 464px;
+}
+
+.scrolled::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrolled::-webkit-scrollbar-track {
+    background: #2F2F37;
+}
+
+.scrolled::-webkit-scrollbar-thumb {
+    background: #8585AD;
+    border: 3px solid #2F2F37;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    margin-right: 8px;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.element:first-of-type {
+    margin-top: 0;
+}
