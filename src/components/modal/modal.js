@@ -8,7 +8,7 @@ import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 
 import modalStyles from './modal.module.css';
 
-const modalRoot = document.getElementById('root');
+const modalRoot = document.getElementById('react-modals');
 
 function Modal({ title, closeModal, children }) {
     useEffect(() => {

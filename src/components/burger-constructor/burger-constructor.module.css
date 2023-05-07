@@ -1,5 +1,8 @@
 .main {
     height: 912px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .scrolled {
